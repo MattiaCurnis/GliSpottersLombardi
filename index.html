@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="it">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GliSpottersLombardi</title>
+    <link href="filecss.css" rel="stylesheet">
+  </head>
+<body>
+  <BODY background=" ">
+  
+
+  <h1 class=colortitle> Benvenuto sul sito de "GliSpottersLombardi"!</h1>
+
+<hr/>
+
+<div id="introalsito" >
+<h3>Chi siamo e cosa facciamo</h3>
+<p>Il gruppo degli spotters Lombardi è composto da 6 membri da Brescia, Bergamo e Milano. Come già dice il nome del sito siamo degli spotters e facciamo foto e video ad aerei ed elicotteri. </p>
+</div>
+
+<div class="menu-container" style="float: right;">
+  <div class="menu-button">Apri Menù</div>
+  <div class="dropdown-menu">
+
+    <div class="menù" >
+     <li><a href="https://www.flightradar24.com">Flightradar24</a></li>
+     <li><a href="#radio "> Radio</a></li>
+     <li><a href="#foto24 "> Foto 2024</a></li>
+     <li><a href="#foto25 "> Foto 2025</a></li>
+     <li><a href="https://www.windy.com/?45.400,10.063,8"> Radar meteo</a></li>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .pagina { display: none; } 
+  .attiva { display: block; } 
+</style>
+</head>
+
+<body>
+  <body style="text-align: left;" > </body>
+<nav>
+  <button onclick="mostraPagina('Notizie aeroporti Milano')">Notizie aeroporti Milano</button> 
+  <button onclick="mostraPagina('Spot aeroporti Milano')">Spot aeroporti Milano</button>
+</nav>
+
+<div id="Notizieaeroportimilano" class="pagina attiva"> 
+  <h1>Questa è la sezione riguardante tutte le notizie degli aeroporti di Milano (Bergamo, Malpensa e Linate)</h1>
+  <a href="https://www.milanbergamoairport.it/it/news/">Notizie aggiornate dell'aeroporto di Bergamo</a> <br>
+  <a href="https://www.milanolinate-airport.com/it/assistenza/news">Notizie aggiornate dell'aeroporto di Linate</a><br>
+  <a href="https://www.milanomalpensa-airport.com/it/assistenza/news">Notizie aggiornate dell'aeroporto di Malpensa</a><br>
+  <p>Notizie in aggiornamento.</p>
+</div>
+
+<div id="Spotaeroportimilano" class="pagina"> 
+  <h1>Qui puoi trovare tutti gli spot all'aeroporto di Bergamo, Malpensa e Linate </h1> <div style="width: 250px;">
+  <p>Presto ci sarà la foto qui.</p>
+</div>
+
+<script>
+  function mostraPagina(id) {
+      let pagine = document.querySelectorAll('.pagina');
+      pagine.forEach(pagina => pagina.classList.remove('attiva'));
+      
+      document.getElementById(id).classList.add('attiva');
+  }
+</script>
+
+</body>
+</html>

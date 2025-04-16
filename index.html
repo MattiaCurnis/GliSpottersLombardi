@@ -5,21 +5,110 @@
     <meta charset="UTF-8">
     <title>GliSpottersLombardi</title>
     <link href="filecss.css" rel="stylesheet">
+   
+    <style>
+      /* Reset e basi */
+
+      * {
+        box-sizing: border-box;
+        margin: 0;
+        padding: 0;
+      }
+      html, body {
+        height: 100%;
+        font-family: Arial, sans-serif;
+      }
+      /* Hero Section */
+      .hero {
+        margin-top: 30px;
+        position: relative;
+        width: 100%;
+        height: 100vh;
+    
+        background: url('BravoDelta.jpg') no-repeat center center;
+        background-size: cover;
+    
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        text-align: center;
+        overflow: hidden;
+      }
+      /* Sottile overlay per enfatizzare il testo */
+      .hero::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.3);
+        z-index: 1;
+      }
+      .hero-content {
+        position: relative;
+        z-index: 2;
+        animation: fadeIn 1.5s ease-out forwards;
+      }
+      .hero-content h1 {
+        font-size: 3rem;
+        margin-bottom: 1rem;
+      }
+      .hero-content p {
+        font-size: 1.5rem;
+        margin-bottom: 2rem;
+      }
+      @keyframes fadeIn {
+        from {
+          opacity: 0;
+          transform: translateY(-20px);
+        }
+        to {
+          opacity: 1;
+          transform: translateY(0);
+        }
+      }
+      .enter-btn {
+        background-color: white;
+        color: #2c3e50;
+        border: none;
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        border-radius: 5px;
+        cursor: pointer;
+        transition: transform 0.3s ease, opacity 0.3s ease;
+      }
+      .enter-btn:hover {
+        transform: scale(1.1);
+        opacity: 0.9;
+      }
+      /* Sezione del contenuto */
+      .content-section {
+        padding: 30px;
+        text-align: center;
+        background: #f9f9f9;
+      }
+      .content-section h2 {
+        margin-bottom: 15px;
+        font-size: 2rem;
+        color: #2c3e50;
+      }
+      .content-section p {
+        font-size: 1.1rem;
+        color: #555;
+        max-width: 800px;
+        margin: 0 auto;
+      }
+    </style>
   </head>
-<body>
-  <BODY background=" ">
-  
 
-  <h1 class=colortitle> Benvenuto sul sito de "GliSpottersLombardi"!</h1>
+ <body>
 
-<hr/>
+ <h1 class=colortitle> Benvenuto sul sito de "GliSpottersLombardi"!</h1>
+ <hr/>
 
-<div id="introalsito" >
-<h3>Chi siamo e cosa facciamo</h3>
-<p>Il gruppo degli spotters Lombardi è composto da 6 membri da Brescia, Bergamo e Milano. Come già dice il nome del sito siamo degli spotters e facciamo foto e video ad aerei ed elicotteri. </p>
-</div>
-
-<div class="menu-container" style="float: left;">
+ <div class="menu-container" style="float: left;">
   <div class="menu-button">Apri Menù</div>
   <div class="dropdown-menu">
 
@@ -32,7 +121,36 @@
     </div>
 
   </div>
-</div>
+ </div>
 
-</body>
+ <body>
+ <div class="hero">
+  <div class="hero-content">
+    <h1>GliSpottersLombardi</h1>
+    <br>
+    <p>Ciò che ci piace fare è fotografare e vedere aerei ed elicotteri</p>
+    <button id="enterBtn" class="enter-btn">Scopri di più</button>
+  </div>
+ </div>
+
+ <div class="content-section" id="mainContent">
+  <h2>Chi siamo e cosa facciamo</h2>
+  <p>
+    Hey ciao! Noi siamo il gruppo degli spotters Lombardi e siamo in 6: Mattia, Lorenzo, Ricky, Gio, Manu e Dany. <br>
+     Proveniamo da Brescia, Bergamo e Milano. Si, città diverse, però ci riuniamo sempre, solitamente il sabato e andiamo in diversi aeroporti come Malpensa, Orio al Serio e Linate a spottare gli aerei. <br>
+     Se avete voglia passate sui nostri profili privati instagram: @gio_spotter_mxp @aviation_by_ricky @just_lollo09 @mattia.curnis @ildany_777 @fezz_bear e sul nostro profilo che abbiamo in comune: @gli_spotters_lombardi, qui pubblichiamo le foto che facciamo durante le sessioni. <br>
+     Facciamo foto e video non solo agli aerei, ma anche agli elicotteri! 
+  </p>
+
+ </div>
+
+ <script>
+  // Scorri in modo fluido al contenuto quando si clicca il pulsante "Scopri di più"
+  document.getElementById('enterBtn').addEventListener('click', function(){
+    document.getElementById('mainContent').scrollIntoView({behavior: 'smooth'});
+  });
+ </script>
+
+
+ </body>
 </html>

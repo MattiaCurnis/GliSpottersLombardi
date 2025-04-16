@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="it">
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>GliSpottersLombardi</title>
+    <link href="filecss.css" rel="stylesheet">
+
+</head>
+
+
+
+<body>
+
+    <div class="separator"></div>
+
+    <div class="image-row">
+        <img src="indiabravodlta.jpg" alt="Anteprima" onclick="openModal(this.src)">
+        <span>EliBergamo I-LMBD</span>
+        <span>15 Aprile 2025</span>
+    </div>
+
+    <div class="separator"></div>
+
+    <!-- Modal per ingrandire l'immagine -->
+    <div id="imageModal" class="modal" onclick="closeModal()">
+        <img id="modalImg" src="" alt="Immagine Ingrandita">
+    </div>
+
+    <script>
+        function openModal(src) {
+            document.getElementById("modalImg").src = src;
+            document.getElementById("imageModal").style.display = "flex";
+        }
+
+        function closeModal() {
+            document.getElementById("imageModal").style.display = "none";
+        }
+    </script>
+
+
+
+</body>

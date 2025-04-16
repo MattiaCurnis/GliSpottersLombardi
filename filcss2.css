@@ -1,0 +1,58 @@
+/*secondo menù per le foto 2025*/
+
+.menu-container {
+    display: flex;
+    }
+    
+    .menu-button {
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    padding: 10px 20px;
+    background-color: #333;
+    color: white;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    }
+    
+    .dropdown-menu {
+    position: absolute;
+    top: 0;
+    left: 100%;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    border: 1px solid #ccc;
+    width: 300px;
+    transform: scale(0);
+    transform-origin: top left;
+    transition: transform 0.3s ease;
+    overflow: hidden;
+    z-index: 100;
+    }
+    
+    .menu-container:hover .dropdown-menu {
+    transform: scale(1);
+    }
+    
+    .menu-item {
+    width: 100px;
+    padding: 10px;
+    text-align: center;
+    border-right: 1px solid #ccc;
+    box-sizing: border-box;
+    }
+    
+    .menu-item:last-child {
+    border-right: none;
+    }
+    
+    .menu-item:hover {
+    background-color: #eee;
+    cursor: pointer;
+    }
+    
+    .menù{
+     font-family: Verdana, Geneva, Tahoma, sans-serif;
+    
+    }
+    

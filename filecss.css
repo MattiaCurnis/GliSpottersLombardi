@@ -12,60 +12,52 @@ body {
 
 /*css del Menù*/
 
-.menu-container  { 
-position: fixed;
-z-index: 1000;
+.menu-container { 
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 25px; /* Larghezza iniziale */
+    height: 100vh; /* Occupa tutta l'altezza della pagina */
+    background-color: #0077cc; /* Azzurro */
+    transition: width 0.3s ease-in-out;
+    z-index: 9999; /* Lo porta sopra tutto */
 }
 
-.menu-button {
-font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-padding: 10px 20px;
-background-color: #333;
-color: white;
-border: none;
-cursor: pointer;
-border-radius: 5px;
+.menu-container:hover { 
+    width: 250px; /* Si espande quando ci passi sopra */
 }
 
 .dropdown-menu {
-position: static;
-top: 0;
-left: 100%;
-display: flex;
-flex-direction: row;
-background-color: #fff;
-border: 1px solid #ccc;
-width: 300px;
-transform: scaleX(0);
-transform-origin: left;
-transition: transform 0.3s ease;
-overflow: hidden;
-z-index: 1;
+    width: 0; /* Inizialmente non visibile */
+    overflow: hidden; /* Nasconde il contenuto interno */
+    background-color: #fff;
+    height: 100vh; /* Occupa tutta l'altezza */
+    transition: width 0.3s ease-in-out; /* Si apre gradualmente */
 }
 
-.menu-container:hover .dropdown-menu {
-transform: scaleX(1);
+.menu-container:hover .dropdown-menu { 
+    width: 200px; /* Espande il contenitore bianco insieme al menu */
 }
 
-.menu-item {
-width: 100px;
-padding: 10px;
-text-align: center;
-border-right: 1px solid #ccc;
-box-sizing: border-box;
+.menu {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding: 10px;
 }
 
-.menu-item:last-child {
-border-right: none;
+.menu li {
+    padding: 10px;
+    text-align: left;
+    border-bottom: 1px solid #ccc;
+    list-style: none;
 }
 
-.menu-item:hover {
-background-color: #eee;
-cursor: pointer;
+.menu li a {
+    text-decoration: none;
+    color: #333;
 }
 
-.menù{
- font-family: Verdana, Geneva, Tahoma, sans-serif;
+.menu li:hover {
+    background-color: #eee;
 }
 
 

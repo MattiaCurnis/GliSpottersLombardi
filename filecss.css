@@ -182,3 +182,15 @@ body {
  width: 50%;
  height: auto;
 }
+
+
+/*sfondo foto 2025*/
+.home {
+    background-image: url('BravoDelta.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100vw;
+    height: 100vh;
+
+}

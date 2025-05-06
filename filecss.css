@@ -1,6 +1,23 @@
+
+/*FONT PER LA PAGINA!!*/
+@import url('https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap');
+@font-face {
+    font-family: 'TT Backwards Script';
+    src: url('TT Backwards Script Trial Regular.otf') format('opentype');
+}
+
+/**//**//**//**//**//**/
+
 .colortitle{
     color:rgb(7, 81, 155);
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Montserrat', sans-serif;
+    text-align: center;
+}
+
+.nome{
+    color:rgb(7, 81, 155);
+    font-family: 'TT backwards Script', cursive;
     text-align: center;
 }
 
@@ -79,6 +96,33 @@ body {
 
 .menu-container:hover .dropdown-menu { 
     display: block; /* Mostra il menu */
+}
+
+/*submenù*/
+.submenu {
+    display: none;
+    list-style: none;
+    padding-left: 15px;
+    font-size: 0.9em; /* Sottomenù più piccolo */
+    background-color: #f8f8f8;
+    border-left: 2px solid #ccc;
+    margin-top: 5px;
+}
+
+.menu-toggle {
+    background: none;
+    border: none;
+    font-size: 1em;         
+    color: #333;
+    cursor: pointer;
+}
+
+.menu li {
+    position: relative;
+}
+
+.menu li:hover .submenu {
+    display: block; /* Mostra il sottomenù */
 }
 
 

@@ -117,7 +117,8 @@
 
  <body>
 
- <h1 class=colortitle> Benvenuto sul sito de "GliSpottersLombardi"!</h1>
+ <h1 class=colortitle> Benvenuto sul sito de 
+ <div class=nome> "Gli_Spotters_Lombardi" </div> </h1>
  <hr/>
 
 
@@ -126,10 +127,15 @@
   <div class="dropdown-menu">
       <ul class="menu">
           <li><a href="https://www.flightradar24.com">Flightradar24</a></li>
-          <li><a href="paginaRadio.html"> Radio</a></li>
-          <li><a href="foto2024.html"> Foto 2024</a></li>
-          <li><a href="foto2025.html"> Foto 2025</a></li>
-          <li><a href="https://www.windy.com/?45.400,10.063,8"> Radar meteo</a></li>
+          <li><a href="paginaRadio.html">Radio</a></li>
+          <li>
+              <button class="menu-toggle" onclick="toggleSubmenu('submenu1')">Foto 📸</button>
+              <ul id="submenu1" class="submenu">
+                  <li><a href="foto2024.html">Foto 2024</a></li>
+                  <li><a href="foto2025.html">Foto 2025</a></li>
+              </ul>
+          </li>
+          <li><a href="https://www.windy.com/?45.400,10.063,8">Radar meteo</a></li>
       </ul>
   </div>
 </div>
